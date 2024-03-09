@@ -20,5 +20,9 @@ function calc() {
     const divided = difference / fig
     const finalAnswer = divided * 100
 
-    document.getElementById("answer").innerHTML = finalAnswer + "%";
+    if (finalAnswer < 100 ) {
+        document.getElementById("answer").innerHTML = "Negative decrease of " + finalAnswer + "%";
+    } else {
+        document.getElementById("answer").innerHTML = "Positive increase of " + finalAnswer + "%";
+    }
 }
